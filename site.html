@@ -32,6 +32,8 @@
             text-shadow: 0 2px 8px rgba(0,0,0,0.3);
             font-weight: 700;
             text-align: center;
+            position: relative;
+            z-index: 10;
         }
 
         .liquid-glass {
@@ -49,9 +51,10 @@
             padding: 0;
             margin: 0;
             text-decoration: none;
-            cursor: move; /* Show move cursor */
+            cursor: move;
             font-family: "Inter", sans-serif;
             font-optical-sizing: auto;
+            z-index: 10;
         }
 
         .liquid-glass:focus {
@@ -91,9 +94,64 @@
             font-family: "Inter", sans-serif;
             font-optical-sizing: auto;
         }
+
+        /* Background text styles */
+        .bg-text {
+            position: absolute;
+            font-size: 120px;
+            font-weight: 800;
+            opacity: 0.4; /* Increased visibility */
+            z-index: 1;
+            pointer-events: none;
+            font-family: "Inter", sans-serif;
+            font-optical-sizing: auto;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3); /* Added shadow for better contrast */
+        }
+
+        .text-1 {
+            top: 10%;
+            left: 5%;
+            color: #ff6b6b;
+            transform: rotate(-15deg);
+        }
+
+        .text-2 {
+            top: 20%;
+            right: 10%;
+            color: #4ecdc4;
+            transform: rotate(10deg);
+        }
+
+        .text-3 {
+            bottom: 15%;
+            left: 15%;
+            color: #ffd166;
+            transform: rotate(5deg);
+        }
+
+        .text-4 {
+            bottom: 25%;
+            right: 20%;
+            color: #6a0572;
+            transform: rotate(-10deg);
+        }
+
+        .text-5 {
+            top: 40%;
+            left: 25%;
+            color: #118ab2;
+            transform: rotate(15deg);
+        }
     </style>
 </head>
 <body>
+    <!-- Background decorative text -->
+    <div class="bg-text text-1">UI</div>
+    <div class="bg-text text-2">GLASS</div>
+    <div class="bg-text text-3">DESIGN</div>
+    <div class="bg-text text-4">APPLE</div>
+    <div class="bg-text text-5">MODERN</div>
+    
     <h1 class="title">Liquid Glass UI</h1>
     
     <div class="liquid-glass" id="draggableButton">
